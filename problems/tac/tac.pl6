@@ -1,5 +1,8 @@
 #!/usr/bin/env perl6
 
-sub MAIN {
-    put "OK";
+sub MAIN (Str $file!) {
+	die "Not a file ($file)" unless $file.IO.f;
+	for $file.IO.lines.reverse -> $line {
+		put $line;
+	}
 }

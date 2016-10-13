@@ -11,11 +11,9 @@ elif [[ $# -gt 0 ]]; then
 	i=1
 	while read -r line;
 		do
-		echo $i $line
+		echo "$i $line"
 		let i++
 		done < $file	
 
 fi
 
-
-echo "OK"
